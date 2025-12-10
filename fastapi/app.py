@@ -14,7 +14,7 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://michelangelo:michelangelo123@db:5432/michelangelo"
+    "postgresql://microplastic:microplastic123@db:5432/microplastic"
 )
 
 # -----------------------------
