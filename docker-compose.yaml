@@ -5,7 +5,7 @@ services:
   nextjs:
     build:
       context: ./nextjs
-    container_name: nextjs_app
+    container_name: nextjs_app_microplastic
     ports:
       - "3000:3000"
     volumes:
@@ -23,7 +23,7 @@ services:
   # ------------------------
   db:
     image: postgres:13
-    container_name: postgres_db
+    container_name: postgres_db_microplastic
     restart: always
     ports:
       - "5432:5432"
@@ -34,7 +34,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U michelangelo"]
+      test: ["CMD-SHELL", "pg_isready -U microplastic"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -45,7 +45,7 @@ services:
   fastapi:
     build:
       context: ./fastapi
-    container_name: fastapi_app
+    container_name: fastapi_app_microplastic
     ports:
       - "8000:8000"
     volumes:
@@ -56,7 +56,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      - DATABASE_URL=postgresql://michelangelo:michelangelo123@db:5432/michelangelo
+      - DATABASE_URL=postgresql://microplastic:microplastic123@db:5432/microplastic
       - SECRET_KEY=supersecretkey
       - ACCESS_TOKEN_EXPIRE_MINUTES=60
     restart: always
