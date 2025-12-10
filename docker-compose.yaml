@@ -1,0 +1,68 @@
+services:
+  # ------------------------
+  # FRONTEND (Next.js)
+  # ------------------------
+  nextjs:
+    build:
+      context: ./nextjs
+    container_name: nextjs_app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nextjs:/src
+      - /src/node_modules
+    working_dir: /src
+    command: npm run dev
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - fastapi
+
+  # ------------------------
+  # DATABASE (PostgreSQL)
+  # ------------------------
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: microplastic
+      POSTGRES_PASSWORD: microplastic123
+      POSTGRES_DB: microplastic
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U michelangelo"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ------------------------
+  # BACKEND (FastAPI)
+  # ------------------------
+  fastapi:
+    build:
+      context: ./fastapi
+    container_name: fastapi_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./fastapi:/src
+    working_dir: /src
+    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://michelangelo:michelangelo123@db:5432/michelangelo
+      - SECRET_KEY=supersecretkey
+      - ACCESS_TOKEN_EXPIRE_MINUTES=60
+    restart: always
+
+# ------------------------
+# PERSISTENT VOLUMES
+# ------------------------
+volumes:
+  postgres_data:

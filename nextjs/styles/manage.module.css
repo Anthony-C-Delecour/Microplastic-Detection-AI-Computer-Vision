@@ -1,0 +1,170 @@
+.pageContainer {
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Navigation Header --- */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3A6A3B;
+  color: white;
+  padding: 0 2rem;
+  height: 80px;
+}
+
+.navLeft h1 {
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #d0ffd0;
+}
+
+/* --- Form --- */
+.formContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* keeps logo/title centered */
+  padding: 40px;
+}
+
+.logoTitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.mainLogo {
+  height: 100px;
+}
+
+.logoTitle h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* All form fields aligned with logo/title edges */
+.formRow,
+.formRowWithButtonFlex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  width: 600px; /* all fields same width */
+}
+
+.inputButtonContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative; /* needed for absolute X */
+}
+
+/* Unified input styles for all fields */
+.formRow input,
+.formRowWithButtonFlex input,
+.inputButtonContainer input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Add extra right padding if X button exists so input looks same width */
+.inputButtonContainer input {
+  padding-right: 32px; /* space for clear button */
+}
+
+/* Clear button */
+.clearButton {
+  position: absolute; /* position inside input container */
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 0;
+  line-height: 1;
+}
+
+/* --- Button --- */
+.btnImport {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #3A6A3B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-align: center; /* <-- ensures text is centered */
+  display: flex;      /* <-- flex helps center the text */
+  justify-content: center; /* <-- horizontal centering */
+  align-items: center;     /* <-- vertical centering */
+}
+
+.btnImport:hover {
+  background: #2d5230;
+}
+
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  color: #666;
+}
+
+/* --- Dialog --- */
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-width: 400px;
+  padding: 2rem;
+}
+
+.dialogActions {
+  justify-content: center;
+  padding: 1rem;
+}
+
+.continueButton {
+  background-color: #3A6A3B;
+  color: #fff;
+}
+
+.continueButton:hover {
+  background-color: #2d5230;
+}
+
+

@@ -1,0 +1,68 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start FastAPI (venv)",
+      "type": "shell",
+      "command": "uvicorn app:app --reload",
+      "options": {
+        "cwd": "${workspaceFolder}/fastapi",
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}/fastapi/.venv/Scripts"
+        }
+      },
+      "group": "build",
+      "presentation": {
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Next.js",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "${workspaceFolder}/nextjs"
+      },
+      "group": "build",
+      "presentation": {
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Docker Compose",
+      "type": "shell",
+      "command": "docker compose up",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Stop Docker Compose",
+      "type": "shell",
+      "command": "docker compose down",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

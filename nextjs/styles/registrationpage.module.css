@@ -1,0 +1,141 @@
+.pageContainer {
+  display: flex;
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  background-color: #f8f9fa;
+}
+
+.leftPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: white;
+}
+
+.illustration {
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+.brandingHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.acronym {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0;
+}
+
+.welcomeText {
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.registerBtn {
+  background-color: #3a6a3b;
+  color: white;
+  padding: 12px 0;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.signInBtn {
+  border-color: #3a6a3b;
+  color: #3a6a3b;
+  padding: 12px 0;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.terms {
+  justify-content: center;
+  color: #6c757d;
+}
+
+.footer {
+  margin-top: 2rem;
+  color: #adb5bd;
+  font-size: 0.8rem;
+}
+
+.tooltipBox {
+  border: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.85rem;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.passwordStrengthContainer {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.passwordStrengthTrack {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.passwordStrengthBar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.passwordStrengthLabelBelow {
+  text-align: center;
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
