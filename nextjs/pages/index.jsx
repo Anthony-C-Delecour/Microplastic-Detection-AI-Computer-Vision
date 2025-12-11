@@ -4,31 +4,40 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.fullWidth}>
+    <div style={{ margin: 0, padding: 0 }}>
       <Navbar />
 
       <section className={styles.hero}>
         <div className={styles.overlay}></div>
 
         <div className={styles.heroContent}>
-          <h1>
+          <h1 className={styles.heroTitle}>
             Advanced Microplastic <br />
             <span className={styles.highlight}>
               Intelligent Monitoring System
             </span>
           </h1>
-
           <p>
             Empower ocean protection with high-precision monitoring technology.
-            Detect and analyze microplastic pollution in real time, supported by 
+            <br />
+            Detect and analyze microplastic pollution in real time, supported by
             comprehensive data insights and actionable intelligence.
           </p>
-
-          <Link href="/live" className={styles.getStartedBtn}>
-            Get Started <span className={styles.arrow}>→</span>
-          </Link>
         </div>
       </section>
+
+      <p className={styles.readyText}>
+        Ready to Monitor{" "}
+        <span className={styles.highlightHover}>Microplastic Concentration?</span>
+      </p>
+
+      <div className={styles.bottomButtonWrapper}>
+        <Link href="/dashboard" legacyBehavior>
+          <a className={styles.getStartedBtn}>
+            Get Started <span className={styles.arrow}>→</span>
+          </a>
+        </Link>
+      </div>
     </div>
   );
 }

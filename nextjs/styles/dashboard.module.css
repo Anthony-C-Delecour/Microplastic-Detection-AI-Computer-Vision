@@ -1,0 +1,230 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+}
+
+.navLogo img {
+  height: 65px;
+  margin-left: -30px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #215e5f;
+  transition: color 0.25s ease, border-bottom 0.25s ease, transform 0.25s ease;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+}
+
+.navLinks a:hover {
+  color: #1BAFA1;
+  border-bottom: 2px solid #1BAFA1;
+  transform: translateY(-3px);
+}
+
+.navLinks a.active {
+  color: #1BAFA1;
+  font-weight: 800;
+  border-bottom: 2px solid #1BAFA1;
+  transform: translateY(0);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fa;
+}
+
+.mainContent {
+  display: flex;
+  gap: 24px;
+  padding: 20px 40px;
+}
+
+.leftPanel {
+  flex: 0 0 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panelTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #215e5f;
+  margin-bottom: 12px;
+}
+
+.videoContainer {
+  position: relative;
+  background-color: #0a1f44;
+  border-radius: 16px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.liveBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(255, 0, 0, 0.85);
+  color: #fff;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 12px;
+}
+
+.videoPlaceholder {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.rightPanel {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dataBlock {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dataBlockTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #215e5f;
+}
+
+.gaugeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.gauge {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 12px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gaugePercent {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.statusLabel.red {
+  color: #ff4d4f;
+  font-weight: 700;
+}
+
+.statusLabel.green {
+  color: #52c41a;
+  font-weight: 700;
+}
+
+.particleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.particleCount {
+  font-weight: 600;
+}
+
+.sizeDistribution {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sizeBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sizeLabel {
+  width: 60px;
+  font-size: 14px;
+}
+
+.bar {
+  height: 12px;
+  border-radius: 6px;
+}
+
+.count {
+  width: 60px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.dataBlockActions {
+  display: flex;
+  gap: 12px;
+}
+
+.primaryBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #40c9c6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+}
+
+.secondaryBtn {
+  padding: 10px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+}
