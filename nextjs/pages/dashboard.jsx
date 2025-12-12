@@ -41,8 +41,7 @@ export default function Dashboard() {
             <div className={styles.sectionHeader}><SensorsIcon/> Analysis Summary</div>
             <div className={styles.metricsBox}>
               <div className={styles.metricCard}>
-                <div>Microplastic Confidence</div>
-                <div className={styles.metricValue}>95%</div>
+                <div className={styles.metricCard}>Microplastic Confidence: <span className={styles.metricValue}>95%</span></div>
               </div>
               <div className={styles.metricCard}>Avg Size: <span className={styles.metricValue}>150 μm</span></div>
               <div className={styles.metricCard}>MP Count: <span className={styles.metricValue}>1520 Pts/L</span></div>
