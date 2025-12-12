@@ -61,7 +61,7 @@
 }
 
 .pageWrapper {
-  background-color: #f5f5f5;
+  background: linear-gradient(to bottom, #e7fafc, #f4fefe); 
   min-height: 100vh; 
   display: flex;
   flex-direction: column;
@@ -209,5 +209,5 @@
   display: flex;
   justify-content: center;
   padding: 40px 0;
-  background: #f5f5f5;
+  background: transparent;
 }
