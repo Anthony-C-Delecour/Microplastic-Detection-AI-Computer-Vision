@@ -59,5 +59,243 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f5f5f5; 
+  background-color: #f5f5f5;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px;
+  flex: 1;
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.liveFeedContainer {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.sectionHeader {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #215e5f;
+}
+
+.feedBox {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 4px solid #b8860b; 
+}
+
+.feedBox.afterTreatment {
+  border-color: #7dd3fc;
+}
+
+.liveTag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: red;
+  color: white;
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+.feedImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.statusSection {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.statusGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.statusItem {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.statusOn {
+  color: green;
+  font-weight: 700;
+}
+
+.statusOff {
+  color: gray;
+  font-weight: 700;
+}
+
+.statusRunning {
+  color: #1BAFA1;
+  font-weight: 700;
+}
+
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.analysisSection {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.metricsBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.metricCard {
+  background: #f1fafa;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.metricValue {
+  font-size: 22px;
+  font-weight: 800;
+  color: #215e5f;
+}
+
+.graphSection {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.graphBox {
+  background: #eef2f3;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-weight: 600;
+}
+
+.alertSection {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.alertList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.alertCritical {
+  background: #ffcccc;
+  padding: 10px;
+  border-left: 6px solid red;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.alertWarning {
+  background: #fff2cc;
+  padding: 10px;
+  border-left: 6px solid orange;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.alertInfo {
+  background: #cce5ff;
+  padding: 10px;
+  border-left: 6px solid #007bff;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.controlSection {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.controlsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.toggleBtn {
+  padding: 12px;
+  background: #215e5f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.toggleBtn:hover {
+  background: #1BAFA1;
+}
+
+.emergencyBtn {
+  grid-column: 1 / 3;
+  padding: 16px;
+  background: #ff3333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logBtn {
+  padding: 12px;
+  background: #ddd;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
 }
